@@ -1,0 +1,16 @@
+.app-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app-wrapper-content {
+  display: flex;
+}
+
+.app-wrapper-content-main {
+  color:yellow;
+  background-color: rgb(230, 1, 157);
+  width: 100%;
+  padding: 20px;
+}

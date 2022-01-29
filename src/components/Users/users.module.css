@@ -1,0 +1,35 @@
+.usersPhoto {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.selectedPage {
+  cursor: pointer;
+  padding: 0 5px;
+  font-weight: bold;
+  color: white;
+  background: #cc6666;
+}
+
+.defaultPage {
+  cursor: pointer;
+  padding: 0 5px;
+  font-weight: normal;
+  color: black;
+}
+
+.pages {
+  -webkit-user-select: none;
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  background-color: #58ff00;
+}
+
+.userInfo {
+  display: inline-block;
+  background-color: #b100a3;
+  margin: 20px;
+}

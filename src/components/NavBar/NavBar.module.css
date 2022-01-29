@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(237, 255, 33);
+  padding: 15px;
+  width: 15%;
+}
+
+.red {
+  color: rgb(230, 1, 157);
+  text-decoration: none;
+  margin: 5px;
+}
+
+.blue {
+  /* color: rgb(66, 92, 241); */
+  text-decoration: none;
+  margin: 5px;
+}
