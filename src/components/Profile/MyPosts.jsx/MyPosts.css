@@ -1,0 +1,8 @@
+.posts {
+  background-color:rgb(0, 151, 252);
+}
+
+.posts__list {
+  padding: 5px;
+  background-color:lawngreen;
+}

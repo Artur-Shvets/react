@@ -1,13 +1,11 @@
 import React from 'react';
-import s from './Header.module.css';
+import './Header.css';
 
-const Header = () => {
+export default function Header() {
   return (
-    <div className={s.header}>
+    <div className='header'>
       <img alt="description"
-           src='https://w7.pngwing.com/pngs/814/482/png-transparent-atom-flat-design-symbol-miscellaneous-symmetry-illustrator.png'/>
+        src='https://w7.pngwing.com/pngs/814/482/png-transparent-atom-flat-design-symbol-miscellaneous-symmetry-illustrator.png' />
     </div>
   );
 }
-
-export default Header;

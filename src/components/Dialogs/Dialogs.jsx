@@ -1,13 +1,13 @@
 import React from 'react';
-import s from './Dialogs.module.css';
+import './Dialogs.css';
 
-function DialogsContainer(props) {
+export default function Dialogs(props) {
   return (
-    <div className={s.dialogs}>
-      <div className={s.dialogsItems}>
+    <div className='dialogs'>
+      <div className='dialogsItems'>
         dialogsElement
       </div>
-      <div className={s.messages}>
+      <div className='messages'>
         <div>messagesElement</div>
         <div>
           <div><textarea placeholder='Enter your message'></textarea></div>
@@ -17,5 +17,3 @@ function DialogsContainer(props) {
     </div>
   );
 }
-
-export default DialogsContainer;
