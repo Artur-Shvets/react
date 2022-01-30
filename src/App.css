@@ -1,16 +1,39 @@
 .app-wrapper {
-  margin: 0 auto;
-  max-width: 1200px;
-  font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+	max-width: 1200px;
+	font-family: 'Roboto', sans-serif;
 }
 
 .app-wrapper__content {
-  display: flex;
+	display: flex;
 }
 
 .app-wrapper-content-main {
-  color:yellow;
-  background-color: rgb(230, 1, 157);
-  width: 100%;
-  padding: 20px;
+	color: yellow;
+	background-color: rgb(230, 1, 157);
+	width: 100%;
+	padding: 20px;
+}
+
+.nav-bar {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(237, 255, 33);
+	padding: 15px;
+	width: 15%;
+}
+
+.nav-bar__item {
+	text-decoration: none;
+	margin: 5px;
+}
+
+.nav-bar__item_red {
+	color: rgb(230, 1, 157);
+}
+
+main {
+	text-align: center;
+	/* background-color: aqua; */
+	margin: 40px;
 }
