@@ -1,13 +1,12 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import './Dialogs.css';
-import { getDialogs } from '../../data';
 
 const getStyle = ({ isActive }) =>
 	isActive ? 'nav-bar__item nav-bar__item_red' : 'nav-bar__item';
 
 export default function Dialogs(props) {
-	let dialogs = getDialogs();
+	let dialogs = props.dialogs();
 	return (
 		<div className='dialogs'>
 			<nav className='nav-bar'>

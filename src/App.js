@@ -7,6 +7,7 @@ import Dialogs from './components/Dialogs/Dialogs';
 import Users from './components/Users/Users';
 import Profile from './components/Profile/Profile';
 import Messages from './components/Dialogs/Messages/Messages';
+import { getDialogs, getDialogItem, getPosts } from './data';
 
 const element1 = (
 	<main>
@@ -21,11 +22,14 @@ function App(props) {
 			<div className='app-wrapper__content'>
 				<Routes>
 					<Route path='/' element={<NavBar />}>
-						<Route path='/dialogs' element={<Dialogs />}>
-							<Route path=':dialogsId' element={<Messages />} />
+						<Route path='/dialogs' element={<Dialogs dialogs={getDialogs} />}>
+							<Route
+								path=':dialogsId'
+								element={<Messages dialogItem={getDialogItem} />}
+							/>
 							<Route index element={element1}></Route>
 						</Route>
-						<Route path='/profile' element={<Profile />} />
+						<Route path='/profile' element={<Profile posts={getPosts} />} />
 						<Route path='/users' element={<Users />} />
 						<Route index element={element1} />
 					</Route>

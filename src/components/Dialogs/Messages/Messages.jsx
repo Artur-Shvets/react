@@ -1,11 +1,10 @@
 import React from 'react';
 import './Messages.css';
 import { useParams } from 'react-router-dom';
-import { getDialog } from '../../../data';
 
-function Messages() {
+function Messages(props) {
 	let params = useParams();
-	let dialogData = getDialog(Number(params.dialogsId));
+	let dialogData = props.dialogItem(Number(params.dialogsId));
 	return (
 		<div className='messages'>
 			{dialogData.messages.map((message, i) => (

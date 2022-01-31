@@ -1,0 +1,8 @@
+.profile-image {
+  overflow: hidden;
+  height: 150px;
+}
+
+.profile-image img {
+  width: 100%;
+}
