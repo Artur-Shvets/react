@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Post.css';
 
 function Post(props) {
@@ -7,7 +7,12 @@ function Post(props) {
 			<div className='post__ava'>
 				<img src='Saitama3.jpg' alt='ava'></img>
 				<div className='post__likes'>
-					<img src='Likes3.png' alt='likes'></img>
+					<img
+						onClick={props.addLike}
+						id={props.post.id}
+						src='Likes3.png'
+						alt='likes'
+					></img>
 					<div>{props.post.likesCount}</div>
 				</div>
 			</div>
