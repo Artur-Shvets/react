@@ -1,12 +1,14 @@
-.messages {
+.dialog__messages {
+	display: flex;
+	flex-direction: column;
 	padding: 20px;
 	background-color: rgb(255, 255, 255);
 	color: black;
 }
 
-.message {
+.dialog__message {
 	border-radius: 15px;
-	margin: 10px;
+	margin: 10px auto auto 10px;
 	padding: 5px 20px;
 	background-color: rgb(235, 235, 235);
 }
