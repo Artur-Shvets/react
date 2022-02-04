@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './Post.css';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Post(props) {
+	const dispatch = useDispatch();
 	return (
 		<div className='post'>
 			<div className='post__ava'>
 				<img src='Saitama3.jpg' alt='ava'></img>
 				<div className='post__likes'>
 					<img
-						onClick={props.addLike}
+						onClick={() => dispatch(props.addLike(props.post.id))}
 						id={props.post.id}
 						src='Likes3.png'
 						alt='likes'

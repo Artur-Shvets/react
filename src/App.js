@@ -8,6 +8,7 @@ import Users from './components/Users/Users';
 import Profile from './components/Profile/Profile';
 import Dialog from './components/Dialogs/Dialog/Dialog';
 import { getDialogs, getPosts } from './data';
+import Counter from './components/Counter/Counter';
 
 const element1 = (
 	<main>
@@ -45,6 +46,7 @@ function App(props) {
 						</Route>
 						<Route path='/profile' element={<Profile posts={getPosts} />} />
 						<Route path='/users' element={<Users />} />
+						<Route path='/counter' element={<Counter />} />
 						<Route index element={element1} />
 					</Route>
 				</Routes>

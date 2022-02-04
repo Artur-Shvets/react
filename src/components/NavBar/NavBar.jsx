@@ -18,6 +18,9 @@ export default function NavBar() {
 				<NavLink className={getStyle} to='/users'>
 					Users
 				</NavLink>
+				<NavLink className={getStyle} to='/counter'>
+					Counter
+				</NavLink>
 			</nav>
 			<div className='app-wrapper-content-main'>
 				<Outlet />
