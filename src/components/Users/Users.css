@@ -1,35 +1,50 @@
-.usersPhoto {
-  object-fit: cover;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.users h1 {
+	text-align: center;
+	margin: auto;
 }
 
-.selectedPage {
-  cursor: pointer;
-  padding: 0 5px;
-  font-weight: bold;
-  color: white;
-  background: #cc6666;
+.user {
+	display: flex;
+	margin-bottom: 10px;
+	padding: 10px;
 }
 
-.defaultPage {
-  cursor: pointer;
-  padding: 0 5px;
-  font-weight: normal;
-  color: black;
+.user__ava {
+	display: flex;
+	flex-direction: column;
 }
 
-.pages {
-  -webkit-user-select: none;
-  position: absolute;
-  left: 50%;
-  display: inline-block;
-  background-color: #58ff00;
+.user__ava img {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-bottom: 10px;
 }
 
-.userInfo {
-  display: inline-block;
-  background-color: #b100a3;
-  margin: 20px;
+.user__info {
+	width: 100%;
+	padding: 10px;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	border: rgb(169, 77, 255) 2px solid;
+	border-radius: 15px;
+	justify-content: space-between;
+}
+
+.user__info-row1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.user__info-row2 {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: space-between;
+}
+
+.user__status {
+	font-size: 12px;
 }

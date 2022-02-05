@@ -15,85 +15,72 @@
 	padding: 20px;
 }
 
+main {
+	text-align: center;
+	margin: auto;
+}
+
+/* ============================= INPUT */
+.input {
+	padding: 5px;
+	display: flex;
+	background-color: rgb(235, 235, 235);
+}
+
+.input textarea {
+	border: none;
+	outline: none;
+	margin: 5px;
+	width: 100%;
+	resize: none;
+	overflow: hidden;
+	padding: 10px;
+	font-size: 14px;
+	display: block;
+	border-radius: 10px;
+}
+
+.input button {
+	margin: auto 5px 8px 5px;
+}
+/* ============================= INPUT */
+
+/* ============================= NAV BAR */
 .nav-bar {
 	display: flex;
 	flex-direction: column;
 	background-color: rgb(237, 255, 33);
 	padding: 15px;
-	width: 15%;
+	width: 20%;
 }
 
 .nav-bar__item {
+	position: sticky;
 	text-decoration: none;
 	margin: 5px;
+	white-space: nowrap; /* Запрещаем перенос строк */
+	overflow: hidden; /* Обрезаем все, что не помещается в область */
+	text-overflow: ellipsis; /* Добавляем многоточие в конце */
 }
 
 .nav-bar__item_red {
 	color: rgb(230, 1, 157);
 }
+/* ============================= NAV BAR */
 
-/* ======================================================== */
-
-.wrapper {
-	backdrop-filter: blur(5px);
-	background-color: rgba(240, 248, 255, 0.7);
-	border-radius: 20px;
-	text-align: center;
-	padding: 10px;
-	margin: 10px auto;
-	max-width: 600px;
-	transition: 0.3s ease-in-out;
-}
-
-.wrapper:hover {
-	backdrop-filter: blur(10px);
-	background-color: rgba(240, 248, 255, 0.8);
-}
-
-.txt {
-	background: white;
-	border-radius: 5px;
-	margin: 5px;
-	padding: 10px;
-	border: solid 1px rgb(158, 158, 158);
-	box-shadow: 0 0 10px 0 rgb(167, 175, 223);
-	width: 100%;
-}
-
-.input-txt {
-	background: white;
-	border-radius: 5px;
-	margin: 5px;
-	padding: 10px;
-	border: solid 1px rgb(158, 158, 158);
-	box-shadow: 0 0 10px 0 rgb(167, 175, 223);
-	width: 100%;
-	transition: 0.3s ease-in-out;
-	outline: none;
-}
-
-.input-txt:focus {
-	box-shadow: 0 0 0px 5px rgb(167, 175, 223);
-}
-
-.row {
-	display: flex;
-}
-
-/* ============================================ Button */
-
+/* ============================= BUTTONS */
 .btn {
 	font-size: 14px;
 	padding: 0 10px;
 	height: 30px;
-	margin: 5px;
+	/* margin: 5px; */
 	border-radius: 8px;
 	background-color: rgb(255, 255, 255);
 	transition: 0.1s ease-in-out;
+	white-space: nowrap; /* Запрещаем перенос строк */
 }
 
-/* ============================================ Button blue */
-
+/* =========== Button blue =========== */
 .btn_blue {
 	color: rgb(13, 109, 255);
 	border: solid 1px rgb(13, 109, 255);
@@ -108,8 +95,7 @@
 	box-shadow: 0 0 10px 0 rgb(13, 109, 255);
 }
 
-/* ============================================ Button red */
-
+/* =========== Button red =========== */
 .btn_red {
 	color: rgba(244, 67, 54, 1);
 	border: solid 1px rgba(244, 67, 54, 1);
@@ -124,8 +110,7 @@
 	box-shadow: 0 0 10px 0 rgba(244, 67, 54, 1);
 }
 
-/* ============================================ Button yellow */
-
+/* =========== Button yellow =========== */
 .btn_yellow {
 	color: rgba(255, 193, 7, 1);
 	border: solid 1px rgba(255, 193, 7, 1);
@@ -140,8 +125,7 @@
 	box-shadow: 0 0 10px 0 rgba(255, 193, 7, 1);
 }
 
-/* ============================================ Button gray */
-
+/* =========== Button gray =========== */
 .btn_gray {
 	color: rgb(108, 117, 126);
 	border: solid 1px rgb(108, 117, 126);
@@ -155,3 +139,4 @@
 .btn_gray:active {
 	box-shadow: 0 0 10px 0 rgb(108, 117, 126);
 }
+/* ============================= BUTTONS */

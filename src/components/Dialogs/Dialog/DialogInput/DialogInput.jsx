@@ -1,40 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './DialogInput.css';
+import { useDispatch } from 'react-redux';
 
-function DialogInput(props) {
-	const [input, setInput] = useState('');
+export default function DialogInput(props) {
+	const dispatch = useDispatch();
+	const textArea = useRef(null);
 
-	const changeInput = e => {
+	const onChangeInput = e => {
 		let element = e.target;
-		setInput(element.value);
+		dispatch(props.changeInput(element.value));
 		element.style.cssText = 'height:auto';
 		element.style.cssText = 'height:' + (element.scrollHeight - 20) + 'px';
 	};
 
-	const sendMessage = () => {
-		if (input) {
-			props.sendMessage(input, props.id);
-			setInput('');
-		}
+	const onClickButton = () => {
+		dispatch(props.sendMessage(props.index));
+		textArea.current.style.cssText = 'height: auto';
 	};
 
 	useEffect(() => {
-		setInput('');
-	}, [props.id]);
+		dispatch(props.resetInput());
+	}, [props.index]);
 
 	return (
-		<div className='dialog__input'>
+		<div className='input'>
 			<textarea
+				ref={textArea}
 				placeholder='Написать сообщение...'
-				value={input}
+				value={props.input}
 				rows={1}
-				onChange={changeInput}
+				onChange={onChangeInput}
 			/>
-			<button className='btn btn_blue' onClick={sendMessage}>
+			<button className='btn btn_blue' onClick={onClickButton}>
 				Send
 			</button>
 		</div>
 	);
 }
-
-export default DialogInput;

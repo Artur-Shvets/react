@@ -14,7 +14,7 @@
 }
 
 .posts__input {
-	/* display: flexbox; */
+	display: flex;
 	margin: 10px;
 }
 

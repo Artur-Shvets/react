@@ -21,12 +21,14 @@ export const postsSlice = createSlice({
 			state.input = e.payload;
 		},
 		addPost: state => {
-			state.posts.push({
-				id: state.posts.length + 1,
-				message: state.input,
-				likesCount: 0,
-			});
-			state.input = '';
+			if (state.input) {
+				state.posts.push({
+					id: state.posts.length + 1,
+					message: state.input,
+					likesCount: 0,
+				});
+				state.input = '';
+			}
 		},
 	},
 });

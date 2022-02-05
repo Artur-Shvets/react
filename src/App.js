@@ -7,44 +7,26 @@ import Dialogs from './components/Dialogs/Dialogs';
 import Users from './components/Users/Users';
 import Profile from './components/Profile/Profile';
 import Dialog from './components/Dialogs/Dialog/Dialog';
-import { getDialogs, getPosts } from './data';
 import Counter from './components/Counter/Counter';
 
 const element1 = (
 	<main>
-		<p>There's nothing here!</p>
+		<p>Выберите, кому хотели бы написать</p>
 	</main>
 );
 
 function App(props) {
-	const [dialogsData, setDialogsData] = useState(getDialogs);
-
-	const sendMessage = (input, id) => {
-		const cloneDialogsData = [...dialogsData];
-		const index = cloneDialogsData.findIndex(dialog => dialog.id === id);
-		cloneDialogsData[index].messages.push(input);
-		setDialogsData(cloneDialogsData);
-	};
-
 	return (
 		<div className='app-wrapper'>
 			<Header />
 			<div className='app-wrapper__content'>
 				<Routes>
 					<Route path='/' element={<NavBar />}>
-						<Route
-							path='/dialogs'
-							element={<Dialogs dialogsData={dialogsData} />}
-						>
-							<Route
-								path=':dialogsId'
-								element={
-									<Dialog dialogsData={dialogsData} sendMessage={sendMessage} />
-								}
-							/>
+						<Route path='/dialogs' element={<Dialogs />}>
+							<Route path=':dialogsId' element={<Dialog />} />
 							<Route index element={element1}></Route>
 						</Route>
-						<Route path='/profile' element={<Profile posts={getPosts} />} />
+						<Route path='/profile' element={<Profile />} />
 						<Route path='/users' element={<Users />} />
 						<Route path='/counter' element={<Counter />} />
 						<Route index element={element1} />
