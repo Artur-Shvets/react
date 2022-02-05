@@ -1,142 +1,142 @@
 .app-wrapper {
-	margin: 0 auto;
-	max-width: 1200px;
-	font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .app-wrapper__content {
-	display: flex;
+  display: flex;
 }
 
 .app-wrapper-content-main {
-	color: yellow;
-	background-color: rgb(230, 1, 157);
-	width: 100%;
-	padding: 20px;
+  color: yellow;
+  background-color: rgb(230, 1, 157);
+  width: 100%;
+  padding: 20px;
 }
 
 main {
-	text-align: center;
-	margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 /* ============================= INPUT */
 .input {
-	padding: 5px;
-	display: flex;
-	background-color: rgb(235, 235, 235);
+  padding: 5px;
+  display: flex;
+  background-color: rgb(235, 235, 235);
 }
 
 .input textarea {
-	border: none;
-	outline: none;
-	margin: 5px;
-	width: 100%;
-	resize: none;
-	overflow: hidden;
-	padding: 10px;
-	font-size: 14px;
-	display: block;
-	border-radius: 10px;
+  border: none;
+  outline: none;
+  margin: 5px;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  padding: 10px;
+  font-size: 14px;
+  display: block;
+  border-radius: 10px;
 }
 
 .input button {
-	margin: auto 5px 8px 5px;
+  margin: auto 5px 8px 5px;
 }
 /* ============================= INPUT */
 
 /* ============================= NAV BAR */
 .nav-bar {
-	display: flex;
-	flex-direction: column;
-	background-color: rgb(237, 255, 33);
-	padding: 15px;
-	width: 20%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(237, 255, 33);
+  padding: 15px;
+  width: 20%;
 }
 
 .nav-bar__item {
-	position: sticky;
-	text-decoration: none;
-	margin: 5px;
-	white-space: nowrap; /* Запрещаем перенос строк */
-	overflow: hidden; /* Обрезаем все, что не помещается в область */
-	text-overflow: ellipsis; /* Добавляем многоточие в конце */
+  position: sticky;
+  text-decoration: none;
+  margin: 5px;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis; /* Добавляем многоточие в конце */
 }
 
 .nav-bar__item_red {
-	color: rgb(230, 1, 157);
+  color: rgb(230, 1, 157);
 }
 /* ============================= NAV BAR */
 
 /* ============================= BUTTONS */
 .btn {
-	font-size: 14px;
-	padding: 0 10px;
-	height: 30px;
-	/* margin: 5px; */
-	border-radius: 8px;
-	background-color: rgb(255, 255, 255);
-	transition: 0.1s ease-in-out;
-	white-space: nowrap; /* Запрещаем перенос строк */
+  font-size: 14px;
+  padding: 0 10px;
+  height: 30px;
+  /* margin: 5px; */
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.1s ease-in-out;
+  white-space: nowrap; /* Запрещаем перенос строк */
 }
 
 /* =========== Button blue =========== */
 .btn_blue {
-	color: rgb(13, 109, 255);
-	border: solid 1px rgb(13, 109, 255);
+  color: rgb(13, 109, 255);
+  border: solid 1px rgb(13, 109, 255);
 }
 
 .btn_blue:hover {
-	color: white;
-	background-color: rgb(13, 109, 255);
+  color: white;
+  background-color: rgb(13, 109, 255);
 }
 
 .btn_blue:active {
-	box-shadow: 0 0 10px 0 rgb(13, 109, 255);
+  box-shadow: 0 0 10px 0 rgb(13, 109, 255);
 }
 
 /* =========== Button red =========== */
 .btn_red {
-	color: rgba(244, 67, 54, 1);
-	border: solid 1px rgba(244, 67, 54, 1);
+  color: rgba(244, 67, 54, 1);
+  border: solid 1px rgba(244, 67, 54, 1);
 }
 
 .btn_red:hover {
-	color: white;
-	background-color: rgba(244, 67, 54, 1);
+  color: white;
+  background-color: rgba(244, 67, 54, 1);
 }
 
 .btn_red:active {
-	box-shadow: 0 0 10px 0 rgba(244, 67, 54, 1);
+  box-shadow: 0 0 10px 0 rgba(244, 67, 54, 1);
 }
 
 /* =========== Button yellow =========== */
 .btn_yellow {
-	color: rgba(255, 193, 7, 1);
-	border: solid 1px rgba(255, 193, 7, 1);
+  color: rgba(255, 193, 7, 1);
+  border: solid 1px rgba(255, 193, 7, 1);
 }
 
 .btn_yellow:hover {
-	color: white;
-	background-color: rgba(255, 193, 7, 1);
+  color: white;
+  background-color: rgba(255, 193, 7, 1);
 }
 
 .btn_yellow:active {
-	box-shadow: 0 0 10px 0 rgba(255, 193, 7, 1);
+  box-shadow: 0 0 10px 0 rgba(255, 193, 7, 1);
 }
 
 /* =========== Button gray =========== */
 .btn_gray {
-	color: rgb(108, 117, 126);
-	border: solid 1px rgb(108, 117, 126);
+  color: rgb(108, 117, 126);
+  border: solid 1px rgb(108, 117, 126);
 }
 
 .btn_gray:hover {
-	color: white;
-	background-color: rgb(108, 117, 126);
+  color: white;
+  background-color: rgb(108, 117, 126);
 }
 
 .btn_gray:active {
-	box-shadow: 0 0 10px 0 rgb(108, 117, 126);
+  box-shadow: 0 0 10px 0 rgb(108, 117, 126);
 }
 /* ============================= BUTTONS */

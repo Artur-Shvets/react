@@ -7,24 +7,24 @@ import { useSelector } from 'react-redux';
 import { changeInput, sendMessage, resetInput } from '../dialogsSlice';
 
 export default function Dialog() {
-	const dialogs = useSelector(state => state.dialogs.dialogs);
-	const input = useSelector(state => state.dialogs.input);
-	let params = useParams();
-	let pageId = Number(params.dialogsId);
-	let index = dialogs.findIndex(dialog => dialog.id === pageId);
-	let messages = dialogs.find(dialog => dialog.id === pageId).messages;
+  const dialogs = useSelector(state => state.dialogs.dialogs);
+  const input = useSelector(state => state.dialogs.input);
+  let params = useParams();
+  let pageId = Number(params.dialogsId);
+  let index = dialogs.findIndex(dialog => dialog.id === pageId);
+  let messages = dialogs.find(dialog => dialog.id === pageId).messages;
 
-	return (
-		<div className='dialog'>
-			<Messages messages={messages} />
-			<DialogInput
-				sendMessage={sendMessage}
-				index={index}
-				length={dialogs.length}
-				changeInput={changeInput}
-				input={input}
-				resetInput={resetInput}
-			/>
-		</div>
-	);
+  return (
+    <div className='dialog'>
+      <Messages messages={messages} />
+      <DialogInput
+        sendMessage={sendMessage}
+        index={index}
+        length={dialogs.length}
+        changeInput={changeInput}
+        input={input}
+        resetInput={resetInput}
+      />
+    </div>
+  );
 }

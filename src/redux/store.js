@@ -5,10 +5,10 @@ import dialogsReducer from '../components/Dialogs/dialogsSlice';
 import usersReducer from '../components/Users/usersSlice';
 
 export default configureStore({
-	reducer: {
-		posts: postsReducer,
-		counter: counterReducer,
-		dialogs: dialogsReducer,
-		users: usersReducer,
-	},
+  reducer: {
+    posts: postsReducer,
+    counter: counterReducer,
+    dialogs: dialogsReducer,
+    users: usersReducer,
+  },
 });
