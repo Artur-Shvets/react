@@ -1,33 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialUsers = [
-  {
-    id: 1,
-    followed: true,
-    fullName: 'Misha',
-    status: 'never look back',
-    location: { city: 'Uman', country: 'Ukraine' },
-  },
-  {
-    id: 2,
-    followed: false,
-    fullName: 'Ayaneh',
-    status: 'land of the pure',
-    location: { city: 'Islamabad', country: 'Pakistan' },
-  },
-  {
-    id: 3,
-    followed: true,
-    fullName: 'Ludvik',
-    status: 'O LA LA',
-    location: { city: 'Zurich', country: 'Switzerland' },
-  },
-];
-
 export const usersSlice = createSlice({
   name: 'users',
   initialState: {
-    users: initialUsers,
+    users: [],
+    totalCount: 0,
+    pageSize: 10,
+    currentPage: 1,
   },
   reducers: {
     follow: (state, userId) => {
@@ -36,10 +15,14 @@ export const usersSlice = createSlice({
       followUser.followed = !followUser.followed;
     },
     setUsers: (state, users) => {
-      state.users = users.payload;
+      state.users = users.payload.items;
+      state.totalCount = users.payload.totalCount;
+    },
+    pageChanged: (state, page) => {
+      state.currentPage = page.payload;
     },
   },
 });
 
-export const { follow, setUsers } = usersSlice.actions;
+export const { follow, setUsers, pageChanged } = usersSlice.actions;
 export default usersSlice.reducer;

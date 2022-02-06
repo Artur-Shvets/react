@@ -15,7 +15,7 @@ const element1 = (
   </main>
 );
 
-function App() {
+export default function App() {
   return (
     <div className='app-wrapper'>
       <Header />
@@ -36,5 +36,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
