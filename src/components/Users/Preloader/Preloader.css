@@ -1,0 +1,6 @@
+.users__preloader {
+  display: block;
+  position: absolute;
+  left: calc(50% + 10px);
+  top: 30vh;
+}

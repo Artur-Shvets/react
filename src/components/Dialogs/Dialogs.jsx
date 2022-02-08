@@ -13,11 +13,7 @@ export default function Dialogs() {
     <div className='dialogs'>
       <nav className='nav-bar'>
         {dialogs.map(dialog => (
-          <NavLink
-            className={getStyle}
-            to={`/dialogs/${dialog.id}`}
-            key={dialog.id}
-          >
+          <NavLink className={getStyle} to={`${dialog.id}`} key={dialog.id}>
             {dialog.name}
           </NavLink>
         ))}

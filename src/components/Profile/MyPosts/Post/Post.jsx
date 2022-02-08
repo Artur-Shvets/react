@@ -7,12 +7,12 @@ function Post(props) {
   return (
     <div className='post'>
       <div className='post__ava'>
-        <img src='Saitama3.jpg' alt='ava'></img>
+        <img src='/Saitama3.jpg' alt='ava'></img>
         <div className='post__likes'>
           <img
             onClick={() => dispatch(props.addLike(props.post.id))}
             id={props.post.id}
-            src='Likes3.png'
+            src='/Likes3.png'
             alt='likes'
           ></img>
           <div>{props.post.likesCount}</div>

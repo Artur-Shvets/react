@@ -4,9 +4,10 @@ export const usersSlice = createSlice({
   name: 'users',
   initialState: {
     users: [],
-    totalCount: 0,
+    totalUsersCount: null,
     pageSize: 10,
-    currentPage: 1,
+    currentPage: null,
+    isFetching: true,
   },
   reducers: {
     follow: (state, userId) => {
@@ -16,13 +17,21 @@ export const usersSlice = createSlice({
     },
     setUsers: (state, users) => {
       state.users = users.payload.items;
-      state.totalCount = users.payload.totalCount;
+      if (!state.totalUsersCount) {
+        state.totalUsersCount = users.payload.totalCount;
+        state.currentPage = 1;
+      }
     },
     pageChanged: (state, page) => {
       state.currentPage = page.payload;
     },
+    toggleIsFetching: (state, value) => {
+      state.isFetching = value.payload;
+    },
   },
 });
 
-export const { follow, setUsers, pageChanged } = usersSlice.actions;
+export const { follow, setUsers, pageChanged, toggleIsFetching } =
+  usersSlice.actions;
+
 export default usersSlice.reducer;

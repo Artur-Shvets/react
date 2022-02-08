@@ -22,13 +22,16 @@ export default function App() {
       <div className='app-wrapper__content'>
         <Routes>
           <Route path='/' element={<NavBar />}>
-            <Route path='/dialogs' element={<Dialogs />}>
+            <Route path='dialogs' element={<Dialogs />}>
               <Route path=':dialogsId' element={<Dialog />} />
               <Route index element={element1}></Route>
             </Route>
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/users' element={<Users />} />
-            <Route path='/counter' element={<Counter />} />
+            <Route
+              path={('profile/me', 'profile/:profileId')}
+              element={<Profile />}
+            />
+            <Route path='users' element={<Users />} />
+            <Route path='counter' element={<Counter />} />
             <Route index element={element1} />
           </Route>
         </Routes>

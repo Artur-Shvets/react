@@ -1,0 +1,46 @@
+.user-item {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.user-item__ava {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-item__ava img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  background-color: gray;
+}
+
+.user-item__info {
+  width: 100%;
+  padding: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  border: rgb(169, 77, 255) 2px solid;
+  border-radius: 15px;
+  justify-content: space-between;
+}
+
+.user-item__info-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.user-item__info-row2 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+}
+
+.user-item__status {
+  font-size: 12px;
+}

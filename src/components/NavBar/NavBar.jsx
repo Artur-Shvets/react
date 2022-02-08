@@ -9,16 +9,16 @@ export default function NavBar() {
   return (
     <>
       <nav className='nav-bar'>
-        <NavLink className={getStyle} to='/dialogs'>
+        <NavLink className={getStyle} to='dialogs'>
           Dialogs
         </NavLink>
-        <NavLink className={getStyle} to='/profile'>
+        <NavLink className={getStyle} to='/profile/me'>
           Profile
         </NavLink>
-        <NavLink className={getStyle} to='/users'>
+        <NavLink className={getStyle} to='users'>
           Users
         </NavLink>
-        <NavLink className={getStyle} to='/counter'>
+        <NavLink className={getStyle} to='counter'>
           Counter
         </NavLink>
       </nav>
